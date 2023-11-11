@@ -4,7 +4,7 @@ import "firebase/auth"
 import "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBEzjI5Kx0EokpKKe0N4XJhg7KVL2R19m4",
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "brilliant-sciences.firebaseapp.com",
   projectId: "brilliant-sciences",
   storageBucket: "brilliant-sciences.appspot.com",
