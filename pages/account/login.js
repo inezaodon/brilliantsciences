@@ -3,8 +3,6 @@ import LockIcon from '@mui/icons-material/Lock';
 import Typography from '@mui/material/Typography';
 import Stack  from '@mui/material/Stack';
 import {Button, TextField, IconButton}  from '@mui/material';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from "firebase/app"
 import {GoogleLogin, EmailPasswordLogin, GoogleLogout} from "../../helpers/login"
 import {useSelector} from "react-redux"
 import {useRouter} from "next/router"

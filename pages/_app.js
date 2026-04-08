@@ -5,7 +5,7 @@ import Header from "../components/Header"
 import Footer from "../components/Footer"
 import StoreWorker from "../components/StoreWorker"
 import { useRouter } from "next/router"
-import {app} from "../helpers/firebase"
+import { app } from "../helpers/firebase"
 import {useAuthState} from "react-firebase-hooks/auth"
 import {getAuth} from "firebase/auth"
 
@@ -26,7 +26,7 @@ const store = createStore(
   reducers, composeWithDevTools()
 )
 
-app()
+void app
 
 function MyApp({ Component, pageProps }) {
     const router  = useRouter();

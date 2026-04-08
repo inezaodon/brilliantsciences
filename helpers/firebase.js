@@ -1,11 +1,8 @@
-import {initializeApp, getApps, getApp} from "firebase/app"
-// import {FirebaseApp as auth} from "firebase/app"
-import "firebase/auth"
-import "firebase/firestore"
+import { initializeApp, getApps, getApp } from "firebase/app"
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-   authDomain: "brilliant-sciences.firebaseapp.com",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: "brilliant-sciences.firebaseapp.com",
   projectId: "brilliant-sciences",
   storageBucket: "brilliant-sciences.appspot.com",
   messagingSenderId: "811825813849",
@@ -13,14 +10,4 @@ const firebaseConfig = {
   measurementId: "G-L87TNW9W4B"
 }
 
-// // Initialize Firebase
-// export const app = (!getApps().length) ? initializeApp(firebaseConfig) : getApp()
-export const app = () => {
-  if(!getApps().length){
-    return initializeApp(firebaseConfig)
-  }
-  console.log("There")
-}
-
-// console.log(firebase.auth) // Undefined
-// console.log(firebase.default.auth) // Function
+export const app = !getApps().length ? initializeApp(firebaseConfig) : getApp()
